@@ -31,6 +31,9 @@ const QuestionContainer = () => {
       <Grid item xs={12} md={6}>
         <QuestionCard />
       </Grid>
+      <Grid item xs={12} md={6}>
+        <QuestionCard />
+      </Grid>
     </Grid>
   );
 };

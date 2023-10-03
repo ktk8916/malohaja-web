@@ -7,7 +7,7 @@ const AnswerAudio = ({ answer }) => {
       <Grid item xs={10} md={10}>
         <Chip
           avatar={<Avatar alt="profile" src={answer?.member.profileImageUri} />}
-          label="Avatar"
+          label={answer?.member.nickname}
           variant="outlined"
         />
       </Grid>
@@ -19,7 +19,7 @@ const AnswerAudio = ({ answer }) => {
       <Grid item xs={12} md={12}>
         <Box>
           <audio controls style={{ width: '100%' }}>
-            <source src="your-audio-file.mp3" type="audio/mpeg" />
+            <source src={answer?.voiceUri} type="audio/mpeg" />
           </audio>
         </Box>
       </Grid>
