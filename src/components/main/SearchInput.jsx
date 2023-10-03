@@ -22,13 +22,6 @@ const SearchInput = () => {
       id="input-with-sx"
       label="Search"
       fullWidth
-      InputProps={{
-        endAdornment: (
-          <InputAdornment position="start" onClick={onSubmitHandler}>
-            <SearchOutlinedIcon color="primary" />
-          </InputAdornment>
-        ),
-      }}
       variant="outlined"
       value={keyword}
       onChange={onChangeHandler}

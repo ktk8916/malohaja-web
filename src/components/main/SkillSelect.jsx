@@ -23,14 +23,16 @@ const MenuProps = {
 
 const skills = Object.keys(skillInfo).map((key) => skillInfo[key]);
 
-const SkillSelect = () => {
+const SkillSelect = ({ setSkills }) => {
   const [selectSkills, setSelectSkills] = useState([]);
 
-  const handleChange = (event) => {
+  const handleChange = (e) => {
     const {
       target: { value },
-    } = event;
-    setSelectSkills(typeof value === 'string' ? value.split(',') : value);
+    } = e;
+    const newSkills = typeof value === 'string' ? value.split(',') : value;
+    setSelectSkills(newSkills);
+    setSkills(newSkills);
   };
   return (
     <FormControl fullWidth>

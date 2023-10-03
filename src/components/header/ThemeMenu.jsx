@@ -5,7 +5,7 @@ import hitoriColor from '../../assets/theme/hitori.png';
 import ikuyoColor from '../../assets/theme/ikuyo.png';
 import nijikaColor from '../../assets/theme/nijika.png';
 import ryoColor from '../../assets/theme/ryo.png';
-import useThemeStore from '../../stores/store';
+import { useThemeStore } from '../../stores/store';
 import { themeSelect } from '../../styles/MaterialThemes';
 import Button from '@mui/material/Button';
 

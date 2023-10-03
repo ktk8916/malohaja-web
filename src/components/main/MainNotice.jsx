@@ -14,7 +14,7 @@ const MainNotice = () => {
         alignItems: 'center',
       }}
     >
-      <Typography variant="h1">대충 적당한 안내문구</Typography>
+      <Typography variant="h1"></Typography>
     </Box>
   );
 };

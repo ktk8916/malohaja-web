@@ -6,4 +6,16 @@ const useThemeStore = create((set) => ({
   setTheme: (theme) => set({ theme: theme }),
 }));
 
-export default useThemeStore;
+const useLoginUserStore = create((set) => ({
+  user: {
+    id: 0,
+    profileImageUri: '',
+    nickname: '',
+    accessToken: '',
+    role: '',
+    isLogin: false,
+  },
+  setUser: (user) => set(user),
+}));
+
+export { useThemeStore, useLoginUserStore };

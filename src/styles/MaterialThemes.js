@@ -20,6 +20,9 @@ export const ryo = createTheme({
     primary: {
       main: '#4C6CA5',
     },
+    cancel: {
+      main: '#CCCCCC',
+    },
   },
 });
 export const ikuyo = createTheme({
