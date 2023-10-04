@@ -5,12 +5,14 @@ import Main from '../pages/main/Main';
 import Oauth2Loading from '../components/header/Oauth2Loading';
 import Signup from '../pages/signup/Signup';
 import QuestionWriter from '../pages/write/QuestionWriter';
+import QuestionDetail from '../pages/question/QuestionDetail';
 
 const MyRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Template />}>
         <Route path="/" element={<Main />} />
+        <Route path="/question/:id" element={<QuestionDetail />} />
         <Route path="/question/write" element={<QuestionWriter />} />
       </Route>
       <Route path="/auth/login/:provider" element={<Oauth2Loading />} />

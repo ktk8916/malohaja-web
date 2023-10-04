@@ -6,7 +6,10 @@ import githubLogo from '../../assets/oauth2/github.svg';
 
 const Oauth2Button = () => {
   const kakaoLogin = () => {
-    window.location.assign(process.env.REACT_APP_KAKAO_OAUTH2_URI);
+    console.log(process.env.REACT_APP_KAKAO_OAUTH2_URI);
+    window.location.assign(
+      'https://kauth.kakao.com/oauth/authorize?client_id=75feb0a1961beae6832bbf29b94af0be&redirect_uri=http://localhost:3000/auth/login/kakao&response_type=code',
+    );
   };
   const githubLogin = () => {
     window.location.assign(process.env.REACT_APP_GITHUB_OAUTH2_URI);

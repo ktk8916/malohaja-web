@@ -1,14 +1,21 @@
 import './App.css';
 import MyRoutes from './routes/MyRoutes';
-import { ThemeProvider } from '@mui/material';
+import { GlobalStyles, ThemeProvider } from '@mui/material';
 import { useThemeStore } from './stores/store';
 
 function App() {
   const { theme } = useThemeStore((state) => state);
   return (
-    <ThemeProvider theme={theme}>
-      <MyRoutes />
-    </ThemeProvider>
+    <>
+      <GlobalStyles
+        styles={{
+          a: { textDecoration: 'none' },
+        }}
+      />
+      <ThemeProvider theme={theme}>
+        <MyRoutes />
+      </ThemeProvider>
+    </>
   );
 }
 

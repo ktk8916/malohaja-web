@@ -13,6 +13,15 @@ export const noTokenApi = async (url, method, data) => {
   return body.data;
 };
 
+export const tokenApi = async (url, method, data) => {
+  const body = await axios({
+    url,
+    method,
+    data,
+    headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
+  });
+};
+
 export const editTokenApi = async (url, method, data, token) => {
   const body = await axios({
     url,
